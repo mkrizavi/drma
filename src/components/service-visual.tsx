@@ -1,7 +1,15 @@
 import Image from "next/image";
 import { photos, type PhotoKey } from "@/lib/photos";
 
-export function ServiceVisual({ variant, className = "", priority = false }: { variant: string; className?: string; priority?: boolean }) {
+type Props = { variant: string; className?: string; priority?: boolean; sizes?: string };
+
+export function ServiceVisual({ variant, className = "", priority = false, sizes }: Props) {
   const photo = photos[(variant in photos ? variant : "hero") as PhotoKey];
-  return <div className={`service-photo ${className}`}><Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 760px) 100vw, 50vw" priority={priority} unoptimized className="service-photo-image"/><span className="service-photo-shade" aria-hidden="true"/></div>;
+  const thumbnail = className.includes("service-thumb");
+  const width = thumbnail ? 360 : priority ? 1800 : 1100;
+  const src = photo.src.replace(/w=\d+/, `w=${width}`);
+  return <div className={`photo-frame ${className}`}>
+    <Image src={src} alt={photo.alt} fill priority={priority} unoptimized sizes={sizes ?? (thumbnail ? "90px" : "(max-width: 800px) 100vw, 50vw")} className="photo-image" />
+    <span className="photo-tint" aria-hidden="true" />
+  </div>;
 }
