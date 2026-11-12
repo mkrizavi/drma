@@ -1,0 +1,13 @@
+/** Documentary stock photography. No image depicts DRMA staff, work, or a Munich property. */
+export const photos = {
+  hero: { src: "https://images.unsplash.com/photo-1775733924031-521cd86c69cc?auto=format&fit=crop&w=1800&q=82", alt: "Modernes Wohngebäude mit begrünten Balkonen", source: "https://unsplash.com/photos/modern-apartment-building-with-balconies-and-greenery-otrBpvmVmNk", credit: "Aalo Lens" },
+  facade: { src: "https://images.unsplash.com/photo-1652234079940-ac7a3d8b4a72?auto=format&fit=crop&w=1400&q=80", alt: "Flur eines Wohngebäudes mit Türen", source: "https://unsplash.com/photos/a-hallway-with-doors-9KK6WblZtQU", credit: "Praveen Kumar Nandagiri" },
+  building: { src: "https://images.unsplash.com/photo-1755896487242-23cb0847e493?auto=format&fit=crop&w=1400&q=80", alt: "Fassade eines Wohngebäudes mit Balkonen", source: "https://unsplash.com/photos/facade-of-a-modern-apartment-building-with-many-balconies-pQVGCKktYUY", credit: "Marcus Lenk" },
+  heat: { src: "https://images.unsplash.com/photo-1650551182956-47efa0f90b64?auto=format&fit=crop&w=1400&q=80", alt: "Technikraum mit Rohren und Messanzeigen", source: "https://unsplash.com/photos/a-room-with-a-bunch-of-pipes-and-gauges-2nsQWyPU6tw", credit: "Immo Wegmann" },
+  air: { src: "https://images.unsplash.com/photo-1776653244534-69d59028af6c?auto=format&fit=crop&w=1400&q=80", alt: "Lüftungsanlagen auf einem Gebäudedach", source: "https://unsplash.com/photos/rooftop-ventilation-units-on-a-corrugated-metal-roof-fMW6eqMSYeQ", credit: "Seyjoon Park" },
+  electric: { src: "https://images.unsplash.com/photo-1758101755915-462eddc23f57?auto=format&fit=crop&w=1400&q=80", alt: "Prüfung eines elektrischen Schaltschranks", source: "https://unsplash.com/photos/electrician-testing-electrical-panel-with-multimeter-PkHf7BUWbtk", credit: "Toolmash Expo" },
+  water: { src: "https://images.unsplash.com/photo-1778855398572-10b5841f50da?auto=format&fit=crop&w=1400&q=80", alt: "Sanitärbereich mit sichtbaren Wasserleitungen", source: "https://unsplash.com/photos/tiled-utility-room-with-a-white-sink-and-exposed-pipes-ml1AZqsrtqg", credit: "N1CE" },
+  metal: { src: "https://images.unsplash.com/photo-1722348673537-2681be7b4b88?auto=format&fit=crop&w=1400&q=80", alt: "Detail eines Türgriffs", source: "https://unsplash.com/photos/a-close-up-of-a-door-handle-on-a-door-oWhHqh4PSvY", credit: "Alex Tyson" },
+  grid: { src: "https://images.unsplash.com/photo-1685320198649-781e83a61de4?auto=format&fit=crop&w=1400&q=80", alt: "Werkbank mit Werkzeugen für Instandhaltungsarbeiten", source: "https://unsplash.com/photos/a-workbench-with-tools-hanging-on-the-wall-NQBZ_qzqPyQ", credit: "Sparsh Paliwal" },
+} as const;
+export type PhotoKey = keyof typeof photos;
